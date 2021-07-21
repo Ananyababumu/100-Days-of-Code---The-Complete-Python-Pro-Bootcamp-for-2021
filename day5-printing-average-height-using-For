@@ -1,0 +1,16 @@
+# 🚨 Don't change the code below 👇
+student_heights = input("Input a list of student heights ").split()
+totalheight = 0
+noofstudent = 0
+for students in student_heights:
+  totalheight += int(students)
+  noofstudent += 1
+# 🚨 Don't change the code above 👆
+
+
+#Write your code below this row 👇
+#average =  student_heights / len(student_heights)
+
+print("total height is "+str(totalheight))
+average = (totalheight / noofstudent)
+print("Average height is "+str(average))
