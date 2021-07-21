@@ -25,40 +25,32 @@ scissors = '''
       (____)
 ---.__(___)
 '''
+game_images = [rock, paper, scissors]
 choice = int(input("What do you choose? 0-Rock, 1-Paper or 2-Scissors\n"))
-print("Your Choice is")
-computerchoice = int(random.randint(0,2))
-if choice > 2:
-  print("Wrong choice")
-elif choice == 0:
-  print(rock)
-elif choice == 1:
-  print(paper)
-elif choice == 2:
-  print(scissors)
-print("Computer Choice is")
-if computerchoice == 0:
-  print(rock)
-elif computerchoice == 1:
-  print(paper)
-elif computerchoice == 2:
-  print(scissors)
-
-if choice == computerchoice:
-  print("Try again")
+if choice > 2 or choice < 0:
+  print("Wrong Choice")
 else:
-  if choice== 0 and computerchoice == 1:
-    print("You Win!!")
-  elif choice== 0 and computerchoice == 2:
-    print("You Win!!")
-  elif choice== 1 and computerchoice == 0:
-    print("You Win!!")
-  elif choice== 1 and computerchoice == 2:
-    print("Oh!! Computer Won")
-  elif choice== 2 and computerchoice == 0:
-    print("Oh!! Computer Won")
-  elif choice== 2 and computerchoice == 1:
-    print("You Win!!")
+  print("Your Choice is")
+  computerchoice = int(random.randint(0,2))
+  print(game_images[choice])
+  print("Computer Choice is")
+  print(game_images[computerchoice])
+
+  if choice == computerchoice:
+    print("Its a draw")
+  else:
+    if choice== 0 and computerchoice == 1:
+      print("You Win!!")
+    elif choice== 0 and computerchoice == 2:
+      print("You Win!!")
+    elif choice== 1 and computerchoice == 0:
+      print("You Win!!")
+    elif choice== 1 and computerchoice == 2:
+      print("Oh!! Computer Won")
+    elif choice== 2 and computerchoice == 0:
+      print("Oh!! Computer Won")
+    elif choice== 2 and computerchoice == 1:
+      print("You Win!!")
 
 
 
